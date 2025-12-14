@@ -3,6 +3,7 @@ import { Link, useLocation } from 'react-router';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Icon } from '@iconify/react';
 import { Button } from '~/components/ui';
+import { MobileMenu } from './mobile-menu';
 
 const navigationTabs = [
   {
@@ -120,7 +121,7 @@ export function Navbar() {
           })}
         </nav>
 
-        {/* Auth Button */}
+        {/* Auth Button & Mobile Menu */}
         <div className="flex items-center space-x-3">
           {isAuthenticated ? (
             <div className="flex items-center space-x-3">
@@ -136,16 +137,24 @@ export function Navbar() {
               </div>
             </div>
           ) : (
-            <div className="flex items-center space-x-3">
-              {/* <Button variant="ghost" size="sm" className="hidden sm:inline-flex">
-                Sign In
-              </Button> */}
-              <Button variant="primary" size="sm">
-                <Icon icon="solar:login-3-bold" className="h-4 w-4 mr-2" />
+            <>
+              {/* Desktop Auth Buttons */}
+              <div className="hidden md:flex items-center space-x-3">
+                <Button variant="primary" size="sm">
+                  <Icon icon="solar:login-3-bold" className="h-4 w-4 mr-2" />
+                  Join Escrowr
+                </Button>
+              </div>
+              
+              {/* Mobile Auth Button */}
+              <Button variant="primary" size="sm" className="md:hidden">
                 Join Escrowr
               </Button>
-            </div>
+            </>
           )}
+          
+          {/* Mobile Menu */}
+          <MobileMenu />
         </div>
       </div>
     </header>

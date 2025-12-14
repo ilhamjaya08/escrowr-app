@@ -1,6 +1,6 @@
 import type { Route } from "./+types/projects";
 import { generateMeta, pageSEO } from "~/lib/seo";
-import { Navbar, Footer, MobileNav } from "~/components/layout";
+import { Navbar, Footer } from "~/components/layout";
 import { 
   ProjectsHero, 
   ProjectsFilters, 
@@ -19,7 +19,7 @@ export default function Projects() {
       <Navbar />
       
       {/* Main Content */}
-      <main className="container mx-auto px-6 py-8 pb-20 md:pb-8">
+      <main className="container mx-auto px-6 py-8">
         {/* Hero Section */}
         <ProjectsHero />
         
@@ -40,7 +40,6 @@ export default function Projects() {
       </main>
       
       <Footer />
-      <MobileNav />
     </div>
   );
 }

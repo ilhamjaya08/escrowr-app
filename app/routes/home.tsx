@@ -1,6 +1,6 @@
 import type { Route } from "./+types/home";
 import { generateMeta, pageSEO } from "~/lib/seo";
-import { Navbar, Footer, MobileNav } from "~/components/layout";
+import { Navbar, Footer } from "~/components/layout";
 import { HeroSection, CategoriesSection, ProjectCards, TopWorkers } from "~/components/dashboard";
 
 export function meta({}: Route.MetaArgs) {
@@ -13,7 +13,7 @@ export default function Home() {
       <Navbar />
       
       {/* Main Dashboard */}
-      <main className="container mx-auto px-6 py-8 pb-20 md:pb-8">
+      <main className="container mx-auto px-6 py-8">
         {/* Top Section - Hero & Categories */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-8">
           {/* Left - Hero Section */}
@@ -42,7 +42,6 @@ export default function Home() {
       </main>
       
       <Footer />
-      <MobileNav />
     </div>
   );
 }

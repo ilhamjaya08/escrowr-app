@@ -3,7 +3,7 @@ import { Icon } from '@iconify/react';
 
 export function HeroSection() {
   return (
-    <div className="relative h-96 overflow-hidden rounded-2xl">
+    <div className="relative min-h-[32rem] sm:min-h-[36rem] md:h-96 overflow-hidden rounded-2xl">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0">
         <img
@@ -15,18 +15,19 @@ export function HeroSection() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 flex flex-col justify-center h-full px-8">
+      <div className="relative z-10 flex flex-col justify-center h-full px-4 sm:px-8 py-12 sm:py-16 md:py-12">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
+          className="space-y-6 sm:space-y-8 md:space-y-6"
         >
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4 leading-tight">
+          <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
             Professional Freelance
             <br />
             <span style={{ color: '#D2D88F' }}>Network</span>
           </h1>
-          <p className="text-xl text-gray-200 mb-8 max-w-lg">
+          <p className="text-base sm:text-lg md:text-2xl text-gray-200 max-w-2xl leading-relaxed">
             Connect with verified professionals. Secure transactions with smart contract escrow.
           </p>
         </motion.div>
@@ -36,16 +37,16 @@ export function HeroSection() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
-          className="relative max-w-2xl"
+          className="relative max-w-3xl mt-8 sm:mt-10 md:mt-8"
         >
-          <div className="flex items-center bg-white/95 backdrop-blur-sm rounded-2xl shadow-lg border border-white/20">
-            <div className="flex items-center px-4 py-3 border-r border-gray-200">
+          <div className="flex flex-col sm:flex-row items-stretch sm:items-center bg-white/95 backdrop-blur-sm rounded-2xl shadow-lg border border-white/20">
+            <div className="flex items-center px-4 py-3 sm:border-r border-gray-200">
               <Icon icon="solar:magnifer-bold" className="h-5 w-5 text-gray-400" />
             </div>
             <input
               type="text"
               placeholder="Search projects, skills, or talent..."
-              className="flex-1 px-4 py-3 bg-transparent text-gray-900 placeholder-gray-500 focus:outline-none text-sm"
+              className="flex-1 px-4 py-3 bg-transparent text-gray-900 placeholder-gray-500 focus:outline-none text-sm sm:text-base"
             />
             <motion.button
               whileHover={{ scale: 1.02 }}
@@ -62,7 +63,7 @@ export function HeroSection() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.4 }}
-          className="flex items-center space-x-6 mt-6 text-sm text-gray-300"
+          className="flex flex-wrap items-center gap-3 sm:gap-4 md:gap-6 mt-8 sm:mt-10 md:mt-6 text-xs sm:text-sm text-gray-300"
         >
           <div className="flex items-center space-x-2">
             <div className="w-2 h-2 rounded-full" style={{ backgroundColor: '#A8A8A8' }} />

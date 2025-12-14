@@ -1,6 +1,6 @@
 import type { Route } from "./+types/workers";
 import { generateMeta, pageSEO } from "~/lib/seo";
-import { Navbar, Footer, MobileNav } from "~/components/layout";
+import { Navbar, Footer } from "~/components/layout";
 import { 
   WorkersHero, 
   WorkersFilters, 
@@ -19,7 +19,7 @@ export default function Workers() {
       <Navbar />
       
       {/* Main Content */}
-      <main className="container mx-auto px-6 py-8 pb-20 md:pb-8">
+      <main className="container mx-auto px-6 py-8">
         {/* Hero Section */}
         <WorkersHero />
         
@@ -40,7 +40,6 @@ export default function Workers() {
       </main>
       
       <Footer />
-      <MobileNav />
     </div>
   );
 }
